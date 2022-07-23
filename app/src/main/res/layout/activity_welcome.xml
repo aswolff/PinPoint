@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Welcome">
+
+    <TextView
+        android:id="@+id/tv_welcomename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_welcomesubheader"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:textStyle="bold"
+        android:textColor="#ffff"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+    </Button>
+
+    <Button
+        android:id="@+id/btn_track"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Track Packages"
+        android:textColor="#ffff"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></Button>
+
+    <Button
+        android:id="@+id/btn_cart"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="View Cart"
+        android:textColor="#ffff"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_shop"></Button>
+
+    <Button
+        android:id="@+id/btn_shop"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Shop"
+        android:textColor="#ffff"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_track"></Button>
+
+    <Button
+        android:id="@+id/btn_coupons"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Coupons"
+        android:textColor="#ffff"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_cart"></Button>
+
+    <TextView
+        android:id="@+id/tv_welcomeheader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Pinpoint"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_welcomesubheader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="All-in-one Delivery Tracking"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_welcomeheader" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
