@@ -30,6 +30,6 @@ public class TrackPackages extends AppCompatActivity {
         webView = (WebView) findViewById(R.id.webView1);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("https://https://parcelsapp.com/en/tracking");        
+        webView.loadUrl("https:parcelsapp.com/en/tracking");
     }
 }
