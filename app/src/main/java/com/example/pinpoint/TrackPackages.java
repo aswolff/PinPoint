@@ -5,10 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.TextView;
 
 public class TrackPackages extends AppCompatActivity {
     TextView tv_header;
+    WebView webView;
 
 
     @Override
@@ -23,5 +26,10 @@ public class TrackPackages extends AppCompatActivity {
                 startActivity(new Intent(TrackPackages.this, Welcome.class));
             }
         });
+        
+        webView = (WebView) findViewById(R.id.webView1);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.setWebViewClient(new WebViewClient());
+        webView.loadUrl("https://https://parcelsapp.com/en/tracking");        
     }
 }
