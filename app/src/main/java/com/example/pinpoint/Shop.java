@@ -5,22 +5,25 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
 
 public class Shop extends AppCompatActivity {
-    TextView tv_header;
+    public static String aurl = "https://www.amazon.com/ref=nav_logo";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop);
 
-        tv_header = findViewById(R.id.tv_shopheader);
-        tv_header.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Shop.this, Welcome.class));
-            }
-        });
+        getFragmentManager().findFragmentById(R.id.tickerlist_display);
+        getFragmentManager().findFragmentById(R.id.ticker_infoWeb);
+
     }
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.tv_shopheader:
+                startActivity(new Intent(this, Welcome.class));
+                break;
+        }
+    }
+
 }
