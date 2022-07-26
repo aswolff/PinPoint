@@ -16,7 +16,8 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="onClick"/>
 
     <TextView
         android:id="@+id/tv_shopsubheader"
@@ -26,25 +27,22 @@
         android:text="All-in-one Delivery Tracking"
         android:textSize="25sp"
         app:layout_constraintTop_toBottomOf="@id/tv_shopheader" />
-
-    <androidx.cardview.widget.CardView
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/ticker_infoWeb"
+        android:name="com.example.pinpoint.InfoWebFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="450dp"
+        tools:layout="@layout/infoweb_layout"
         app:layout_constraintTop_toBottomOf="@id/tv_shopsubheader"
-        app:cardCornerRadius="7dp"
-        android:elevation="3dp"
-        android:background="@color/white"
-        android:layout_marginTop="15dp"
-        android:layout_marginHorizontal="15dp">
-        <EditText
-            android:id="@+id/edit_search"
-            android:drawableLeft="@drawable/baseline_search_24"
-            android:drawablePadding="10dp"
-            android:layout_gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Search"
-            android:textSize="15sp">
-        </EditText>
-    </androidx.cardview.widget.CardView>
+        android:layout_weight="1"/>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/tickerlist_display"
+        android:name="com.example.pinpoint.ListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        tools:layout="@layout/tickerlist_display"
+        app:layout_constraintTop_toBottomOf="@id/ticker_infoWeb"
+        android:layout_weight="5"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
