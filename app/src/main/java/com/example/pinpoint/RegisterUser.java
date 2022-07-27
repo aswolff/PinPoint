@@ -76,8 +76,8 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         }
 
         if(email.isEmpty()){
-            edit_age.setError("Please enter your email!");
-            edit_age.requestFocus();
+            edit_email.setError("Please enter your email!");
+            edit_email.requestFocus();
             return;
         }
 
