@@ -20,7 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Welcome extends AppCompatActivity {
 
-    private Button btn_logout, btn_coupons, btn_cart, btn_track, btn_shop, btn_support;
+    private Button btn_logout, btn_coupons, btn_cart, btn_track, btn_shop, btn_support, btn_fakeShop;
     private FirebaseUser user;
     private DatabaseReference reference;
 
@@ -37,6 +37,14 @@ public class Welcome extends AppCompatActivity {
         btn_coupons = (Button) findViewById(R.id.btn_coupons);
         btn_cart = (Button) findViewById(R.id.btn_cart);
         btn_shop = (Button) findViewById(R.id.btn_shop);
+        btn_fakeShop = (Button) findViewById(R.id.btn_fakeShop);
+
+        btn_fakeShop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Welcome.this, FakeShop.class));
+            }
+        });
 
         btn_shop.setOnClickListener(new View.OnClickListener() {
             @Override

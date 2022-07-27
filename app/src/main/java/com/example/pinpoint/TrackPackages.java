@@ -32,11 +32,4 @@ public class TrackPackages extends AppCompatActivity {
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl("https:parcelsapp.com/en/tracking");
     }
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.tv_trackheader:
-                startActivity(new Intent(this, Welcome.class));
-                break;
-        }
-    }
 }
