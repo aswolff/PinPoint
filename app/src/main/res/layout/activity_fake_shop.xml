@@ -4,10 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Coupons">
+    tools:context=".FakeShop">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_items"
+        android:layout_width="365dp"
+        android:layout_height="594dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_fakeshopsubheader" />
 
     <TextView
-        android:id="@+id/tv_couponsheader"
+        android:id="@+id/tv_fakeshopheader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
@@ -19,23 +28,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_couponssubheader"
+        android:id="@+id/tv_fakeshopsubheader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:text="All-in-one Delivery Tracking"
         android:textSize="25sp"
-        app:layout_constraintTop_toBottomOf="@id/tv_couponsheader" />
-
-    <WebView
-        android:id="@+id/wv_coupons"
-        android:layout_width="410dp"
-        android:layout_height="646dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_couponssubheader"></WebView>
-
-
+        app:layout_constraintTop_toBottomOf="@id/tv_fakeshopheader" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

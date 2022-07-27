@@ -21,6 +21,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_coupons"></Button>
 
+    <Button
+        android:id="@+id/btn_fakeShop"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Fake Shop"
+        android:textColor="#ffff"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/btn_track"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"></Button>
+
     <TextView
         android:id="@+id/tv_welcomename"
         android:layout_width="wrap_content"
@@ -83,7 +95,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_track"></Button>
+        app:layout_constraintTop_toBottomOf="@+id/btn_fakeShop"></Button>
 
     <Button
         android:id="@+id/btn_coupons"
