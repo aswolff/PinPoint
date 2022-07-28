@@ -23,10 +23,25 @@ public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.ExampleV
     }
     public static class ExampleViewHolder extends RecyclerView.ViewHolder{
         public TextView tv_item;
+        public TextView tv_price;
 
         public ExampleViewHolder(@NonNull View itemView, OnItemClickListener listener) {
             super(itemView);
+            tv_price = itemView.findViewById(R.id.tv_price);
             tv_item = itemView.findViewById(R.id.tv_item);
+
+            tv_price.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(listener != null){
+                        int position = getAdapterPosition();
+                        if(position != RecyclerView.NO_POSITION){
+                            listener.onItemClick(position);
+                        }
+                    }
+                }
+            });
+
             tv_item.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -57,6 +72,7 @@ public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.ExampleV
     public void onBindViewHolder(@NonNull ExampleViewHolder holder, int position) {
         shoppingItem currentItem = mExampleList.get(position);
         holder.tv_item.setText(currentItem.getmName());
+        holder.tv_price.setText("$" + Double.toString(currentItem.getmPrice()));
     }
 
     @Override
